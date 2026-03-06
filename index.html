@@ -1,0 +1,510 @@
+<!--
+  index.html
+  Purpose: Single-page, modern personal portfolio layout (semantic HTML) that loads styles from styles.css
+  and behavior from script.js (theme toggle, scroll reveal, scroll spy, mobile nav, contact form UX).
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Simon Mbuvi - Data Analyst portfolio featuring data analysis projects, skills, and contact information."
+    />
+    <meta name="theme-color" content="#0b1020" />
+
+    <title>Simon Mbuvi | Data Analyst</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" id="top">
+      <nav class="nav container" aria-label="Primary">
+        <a class="brand" href="#home" aria-label="Go to top">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span class="brand__text">Simon Mbuvi</span>
+        </a>
+
+        <button
+          class="nav__toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="navLinks"
+          data-nav-toggle
+        >
+          <span class="nav__toggle-bars" aria-hidden="true"></span>
+        </button>
+
+        <div class="nav__links" id="navLinks" data-nav-links>
+          <a class="nav__link" href="#about">About</a>
+          <a class="nav__link" href="#skills">Skills</a>
+          <a class="nav__link" href="#projects">Projects</a>
+          <a class="nav__link" href="#education">Education</a>
+          <a class="nav__link" href="#contact">Contact</a>
+
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Toggle theme"
+            aria-pressed="false"
+            data-theme-toggle
+          >
+            <span class="theme-toggle__icon" aria-hidden="true"></span>
+            <span class="theme-toggle__text" data-theme-label>Dark</span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="home" aria-label="Hero">
+        <div class="hero__bg" aria-hidden="true"></div>
+        <div class="container hero__inner">
+          <div class="hero__content reveal">
+            <p class="eyebrow">Data Analyst</p>
+            <h1 class="hero__title">
+              Turning data into actionable insights<br />
+              for better decisions.
+            </h1>
+            <p class="hero__subtitle">
+              Hi, I'm <strong>Simon Mbuvi</strong>. I analyze data, build models,
+              automate data analysis processes and ETL processes, and create visualizations
+              that help teams understand user behavior and drive growth.
+            </p>
+
+            <div class="hero__cta">
+              <a class="btn btn--primary" href="#projects" data-cta>
+                View My Work
+              </a>
+              <a class="btn btn--ghost" href="#contact">Get in touch</a>
+            </div>
+
+            <ul class="hero__meta" aria-label="Quick highlights">
+              <li class="pill">Data-driven</li>
+              <li class="pill">SQL & Python</li>
+              <li class="pill">Visualization</li>
+            </ul>
+          </div>
+
+          <aside class="hero__card reveal" aria-label="Profile summary">
+            <div class="profile">
+              <img
+                class="profile__photo"
+                src="assets/profile-photo.png"
+                alt="Simon Mbuvi - Data Analyst"
+                loading="lazy"
+                decoding="async"
+                width="400"
+                height="400"
+              />
+              <div class="profile__body">
+                <h2 class="profile__name">Simon Mbuvi</h2>
+                <p class="profile__role">Data Analyst</p>
+                <div class="profile__links" aria-label="Social links">
+                  <a class="icon-link" href="https://github.com/Smbuvi201" target="_blank" rel="noreferrer">
+                    <span aria-hidden="true">GitHub</span>
+                    <span class="sr-only">GitHub profile</span>
+                  </a>
+                  <a class="icon-link" href="https://www.linkedin.com/in/simon-mbuvi-a27580235" target="_blank" rel="noreferrer">
+                    <span aria-hidden="true">LinkedIn</span>
+                    <span class="sr-only">LinkedIn profile</span>
+                  </a>
+                  <a class="icon-link" href="mailto:simonguku11@gmail.com">
+                    <span aria-hidden="true">Email</span>
+                    <span class="sr-only">Send email</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <div class="hero__scroll" aria-hidden="true">
+          <span class="hero__scroll-dot"></span>
+        </div>
+      </section>
+
+      <section class="section" id="about" aria-label="About">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2 class="h2">About</h2>
+            <p class="section__sub">
+              Data analyst with a strong foundation in statistics and data engineering.
+            </p>
+          </div>
+
+          <div class="about">
+            <div class="about__copy reveal">
+              <p class="lead">
+                I'm Simon Mbuvi, a data analyst with a BSc in Statistics. I'm currently
+                a student at ALX Data Engineering and with hands-on experience in data science from 
+                World Quant University DS Labs. 
+                I turn raw data into clear insights through analysis, modelling, and visualization.
+              </p>
+
+              <ul class="traits" aria-label="Key traits">
+                <li class="trait">
+                  <strong>Data analysis</strong>
+                  <span>Extract insights from complex datasets.</span>
+                </li>
+                <li class="trait">
+                  <strong>Statistical modelling</strong>
+                  <span>Build and interpret models for decision support.</span>
+                </li>
+                <li class="trait">
+                  <strong>Data visualization</strong>
+                  <span>Communicate findings with clear, actionable charts.</span>
+                </li>
+                <li class="trait">
+                  <strong>ETL & programming</strong>
+                  <span>Python, R, SQL for data pipelines and analysis.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="about__panel reveal" aria-label="Education">
+              <div class="stat-grid">
+                <div class="stat">
+                  <p class="stat__k">BSc</p>
+                  <p class="stat__v">Statistics</p>
+                </div>
+                <div class="stat">
+                  <p class="stat__k">WQU</p>
+                  <p class="stat__v">DS Labs</p>
+                </div>
+                <div class="stat">
+                  <p class="stat__k">ALX</p>
+                  <p class="stat__v">Data Engineering</p>
+                </div>
+                <div class="stat">
+                  <p class="stat__k">Tools</p>
+                  <p class="stat__v">Python, SQL, PBI</p>
+                </div>
+              </div>
+              <div class="divider" role="presentation"></div>
+              <p class="muted">
+                BSc Statistics graduate. World Quant University DS Labs. Student at ALX Data Engineering.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="skills" aria-label="Skills">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2 class="h2">Skills</h2>
+            <p class="section__sub">Core competencies and tools for data analysis.</p>
+          </div>
+
+          <div class="skills">
+            <div class="skills__chips reveal" aria-label="Skills">
+              <span class="chip">Data analysis</span>
+              <span class="chip">Data modelling</span>
+              <span class="chip">Data visualization</span>
+              <span class="chip">Statistical modelling</span>
+              <span class="chip">Programming (Python, R)</span>
+              <span class="chip">ETL</span>
+            </div>
+
+            <div class="skills__bars reveal" aria-label="Tools proficiency">
+              <div class="bar" role="group" aria-label="Python proficiency">
+                <div class="bar__top">
+                  <span class="bar__label">Python</span>
+                  <span class="bar__value">Proficient</span>
+                </div>
+                <div class="bar__track">
+                  <div class="bar__fill" style="--w: 88%"></div>
+                </div>
+              </div>
+
+              <div class="bar" role="group" aria-label="SQL proficiency">
+                <div class="bar__top">
+                  <span class="bar__label">SQL</span>
+                  <span class="bar__value">Proficient</span>
+                </div>
+                <div class="bar__track">
+                  <div class="bar__fill" style="--w: 85%"></div>
+                </div>
+              </div>
+
+              <div class="bar" role="group" aria-label="Excel proficiency">
+                <div class="bar__top">
+                  <span class="bar__label">Excel</span>
+                  <span class="bar__value">Proficient</span>
+                </div>
+                <div class="bar__track">
+                  <div class="bar__fill" style="--w: 82%"></div>
+                </div>
+              </div>
+
+              <div class="bar" role="group" aria-label="Power BI proficiency">
+                <div class="bar__top">
+                  <span class="bar__label">Power BI</span>
+                  <span class="bar__value">Proficient</span>
+                </div>
+                <div class="bar__track">
+                  <div class="bar__fill" style="--w: 78%"></div>
+                </div>
+              </div>
+
+              <div class="bar" role="group" aria-label="R proficiency">
+                <div class="bar__top">
+                  <span class="bar__label">R</span>
+                  <span class="bar__value">Proficient</span>
+                </div>
+                <div class="bar__track">
+                  <div class="bar__fill" style="--w: 75%"></div>
+                </div>
+              </div>
+
+              <div class="bar" role="group" aria-label="GitHub proficiency">
+                <div class="bar__top">
+                  <span class="bar__label">GitHub</span>
+                  <span class="bar__value">Proficient</span>
+                </div>
+                <div class="bar__track">
+                  <div class="bar__fill" style="--w: 80%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects" aria-label="Projects">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2 class="h2">Projects</h2>
+            <p class="section__sub">
+              Data analysis projects showcasing funnel analysis and customer behavior insights.
+            </p>
+          </div>
+
+          <div class="projects-grid" aria-label="Project cards">
+            <article class="project reveal">
+              <div class="project__top">
+                <img class="project__img" src="assets/user_events.png" alt="User events funnel analysis - traffic sources and conversion rates" loading="lazy" />
+                <h3 class="h3">User Events Funnel Analysis</h3>
+                <p class="project__desc">
+                  Analyzed user_events data to build a funnel by traffic source. Calculated views, carts, purchases,
+                  and conversion rates (cart, purchase, cart-to-purchase). Delivered insights on channel performance
+                  (e.g., email outperforming social) with actionable recommendations.
+                </p>
+              </div>
+              <ul class="badge-row" aria-label="Technologies used">
+                <li class="badge">SQL</li>
+                <li class="badge">Python</li>
+                <li class="badge">MySQL</li>
+                <li class="badge">Jupyter</li>
+              </ul>
+              <div class="project__links">
+                <a class="link" href="https://github.com/Smbuvi201" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </article>
+
+            <article class="project reveal">
+              <div class="project__top">
+                <img class="project__img" src="assets/customer_behaviour.png" alt="Customer behaviour analysis - exploratory data analysis" loading="lazy" />
+                <h3 class="h3">Customer Behaviour Analysis</h3>
+                <p class="project__desc">
+                  Exploratory data analysis of customer shopping behavior. Loaded and profiled customer data
+                  (purchases, demographics, categories, locations) using pandas. Foundation for segmentation,
+                  visualization, and statistical modelling.
+                </p>
+              </div>
+              <ul class="badge-row" aria-label="Technologies used">
+                <li class="badge">Python</li>
+                <li class="badge">Pandas</li>
+                <li class="badge">SQLAlchemy</li>
+                <li class="badge">Jupyter</li>
+              </ul>
+              <div class="project__links">
+                <a class="link" href="https://github.com/Smbuvi201" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="education" aria-label="Education timeline">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2 class="h2">Education</h2>
+            <p class="section__sub">Academic background and ongoing learning.</p>
+          </div>
+
+          <ol class="timeline" aria-label="Education">
+            <li class="timeline__item reveal">
+              <div class="timeline__dot" aria-hidden="true"></div>
+              <div class="timeline__content">
+                <div class="timeline__top">
+                  <h3 class="h3">BSc Statistics</h3>
+                  <p class="timeline__meta">Degree</p>
+                </div>
+                <p class="timeline__desc">
+                  Strong foundation in statistical theory, probability, and data analysis methods.
+                </p>
+              </div>
+            </li>
+
+            <li class="timeline__item reveal">
+              <div class="timeline__dot" aria-hidden="true"></div>
+              <div class="timeline__content">
+                <div class="timeline__top">
+                  <h3 class="h3">WQU DS Labs</h3>
+                  <p class="timeline__meta">Data Science</p>
+                </div>
+                <p class="timeline__desc">
+                  World Quant University Data Science Labs for hands-on data science projects.
+                </p>
+              </div>
+            </li>
+
+            <li class="timeline__item reveal">
+              <div class="timeline__dot" aria-hidden="true"></div>
+              <div class="timeline__content">
+                <div class="timeline__top">
+                  <h3 class="h3">ALX Data Engineering</h3>
+                  <p class="timeline__meta">Student - Present</p>
+                </div>
+                <p class="timeline__desc">
+                  Currently enrolled in ALX Data Engineering program for data pipelines and engineering skills.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section" id="contact" aria-label="Contact">
+        <div class="container">
+          <div class="section__head reveal">
+            <h2 class="h2">Contact</h2>
+            <p class="section__sub">
+              Send a message - the form validates in-browser and gives instant feedback.
+            </p>
+          </div>
+
+          <div class="contact">
+            <form class="form reveal" id="contactForm" action="#" method="post">
+              <div class="field">
+                <label class="label" for="name">Name</label>
+                <input
+                  class="input"
+                  id="name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  required
+                  minlength="2"
+                  aria-describedby="nameHelp"
+                  placeholder="Jane Doe"
+                />
+                <p class="help" id="nameHelp">Please enter at least 2 characters.</p>
+              </div>
+
+              <div class="field">
+                <label class="label" for="email">Email</label>
+                <input
+                  class="input"
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                  aria-describedby="emailHelp"
+                  placeholder="jane@company.com"
+                />
+                <p class="help" id="emailHelp">Use a valid email address.</p>
+              </div>
+
+              <div class="field">
+                <label class="label" for="message">Message</label>
+                <textarea
+                  class="textarea"
+                  id="message"
+                  name="message"
+                  rows="6"
+                  required
+                  minlength="10"
+                  aria-describedby="messageHelp"
+                  placeholder="Tell me about the role or project..."
+                ></textarea>
+                <p class="help" id="messageHelp">10 characters minimum.</p>
+              </div>
+
+              <div class="form__row">
+                <button class="btn btn--primary" type="submit">
+                  Send message
+                </button>
+                <p class="form__note muted">
+                  Prefer email?
+                  <a class="link" href="mailto:simonguku11@gmail.com">simonguku11@gmail.com</a>
+                </p>
+              </div>
+
+              <p class="form__status" role="status" aria-live="polite" data-form-status></p>
+            </form>
+
+            <aside class="contact__aside reveal" aria-label="Contact links">
+              <div class="contact-card">
+                <h3 class="h3">Find me online</h3>
+                <p class="muted">
+                  Connect for data analysis opportunities and collaborations.
+                </p>
+
+                <div class="contact-links">
+                  <a class="contact-link" href="https://github.com/Smbuvi201" target="_blank" rel="noreferrer">
+                    <span class="contact-link__k">GitHub</span>
+                    <span class="contact-link__v">github.com/Smbuvi201</span>
+                  </a>
+                  <a class="contact-link" href="https://www.linkedin.com/in/simon-mbuvi-a27580235" target="_blank" rel="noreferrer">
+                    <span class="contact-link__k">LinkedIn</span>
+                    <span class="contact-link__v">linkedin.com/in/simon-mbuvi-a27580235</span>
+                  </a>
+                  <a class="contact-link" href="mailto:simonguku11@gmail.com">
+                    <span class="contact-link__k">Email</span>
+                    <span class="contact-link__v">simonguku11@gmail.com</span>
+                  </a>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" aria-label="Footer">
+      <div class="container footer">
+        <p class="footer__copy">
+          &copy; <span data-year></span> Simon Mbuvi. All rights reserved.
+        </p>
+        <div class="footer__links" aria-label="Footer social links">
+          <a class="link" href="https://github.com/Smbuvi201" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="link" href="https://www.linkedin.com/in/simon-mbuvi-a27580235" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="link" href="mailto:simonguku11@gmail.com">Email</a>
+        </div>
+      </div>
+    </footer>
+
+    <button class="to-top" type="button" aria-label="Back to top" data-to-top>
+      <span aria-hidden="true">&#8593;</span>
+    </button>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
+
